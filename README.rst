@@ -2,8 +2,8 @@
 django-ratings-models
 =============================
 
-.. image:: https://badge.fury.io/py/ratings.svg
-    :target: https://badge.fury.io/py/ratings
+.. image:: https://badge.fury.io/py/django-ratings-models.svg
+    :target: https://badge.fury.io/py/django-ratings-models
 
 .. image:: https://travis-ci.org/exolever/django-ratings-models.svg?branch=master
     :target: https://travis-ci.org/exolever/django-ratings-models
