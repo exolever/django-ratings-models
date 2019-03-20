@@ -19,7 +19,8 @@ class TestRatings(TestCase):
         pass
 
     def test_something(self):
-        pass
+        rating = models.Rating(rating=4)
+        print(rating)
 
     def tearDown(self):
         pass
