@@ -27,7 +27,8 @@ class Interaction(TimeStampedModel):
     target_object = GenericForeignKey()
 
     ratings = models.ManyToManyField(
-        'OverallRating', related_name='interactions')
+        'OverallRating',
+        related_name='interactions')
     rating = models.FloatField(null=True)
 
     # objects = InteractionManager()
