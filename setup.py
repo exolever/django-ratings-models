@@ -45,18 +45,18 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='ratings',
+    name='django-ratings-models',
     version=version,
     description="""ratings for your Django models""",
     long_description=readme + '\n\n' + history,
-    author='JMarfil',
+    author='marfyl',
     author_email='jose.marfil@openexo.com',
-    url='https://github.com/exolever/django-ratings',
+    url='https://github.com/exolever/django-ratings-models',
     packages=[
         'ratings',
     ],
     include_package_data=True,
-    install_requires=['django-model-utils'],
+    install_requires=['django-appconf>=1.0.2', 'django-model-utils>=3.0.0'],
     license="MIT",
     zip_safe=False,
     keywords='ratings',
@@ -67,8 +67,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
