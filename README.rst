@@ -1,27 +1,27 @@
 =============================
-django-ratings
+django-ratings-models
 =============================
 
 .. image:: https://badge.fury.io/py/ratings.svg
     :target: https://badge.fury.io/py/ratings
 
-.. image:: https://travis-ci.org/marfyl/ratings.svg?branch=master
-    :target: https://travis-ci.org/marfyl/ratings
+.. image:: https://travis-ci.org/exolever/django-ratings-models.svg?branch=master
+    :target: https://travis-ci.org/exolever/django-ratings-models
 
-.. image:: https://codecov.io/gh/marfyl/ratings/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/marfyl/ratings
+.. image:: https://codecov.io/gh/exolever/django-ratings-models/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/exolever/django-ratings-models
 
 ratings for your Django models
 
 Documentation
 -------------
 
-The full documentation is at https://ratings.readthedocs.io.
+The full documentation is at https://django-ratings.models.readthedocs.io.
 
 Quickstart
 ----------
 
-Install django-ratings::
+Install django-ratings-models::
 
     pip install django-ratings-models
 
