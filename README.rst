@@ -5,6 +5,10 @@ django-ratings-models
 .. image:: https://badge.fury.io/py/django-ratings-models.svg
     :target: https://badge.fury.io/py/django-ratings-models
 
+.. image:: https://requires.io/github/exolever/django-ratings-models/requirements.svg?branch=master
+     :target: https://requires.io/github/exolever/django-ratings-models/requirements/?branch=master
+     :alt: Requirements Status
+
 .. image:: https://travis-ci.org/exolever/django-ratings-models.svg?branch=master
     :target: https://travis-ci.org/exolever/django-ratings-models
 
