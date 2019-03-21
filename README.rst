@@ -39,11 +39,6 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Features
---------
-
-* TODO
-
 Running Tests
 -------------
 
