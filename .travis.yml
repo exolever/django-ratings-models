@@ -5,16 +5,15 @@ language: python
 
 cache: pip
 
-python:
-  - 3.6
+python: 3.6
 
 matrix:
   fast_finish: true
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+# install dependencies
 install: pip install -r requirements_test.txt
 
-# command to run tests using coverage, e.g. python setup.py test
+# run tests on every Python version with tox
 script: tox
 
 # pypi deployment
@@ -31,4 +30,6 @@ deploy:
     python: 3.6
 
 after_success:
+  - coverage run --source ratings runtests.py tests
+  - coverage report -m
   - codecov
