@@ -17,10 +17,6 @@ django-ratings-models
 
 ratings for your Django models
 
-Documentation
--------------
-
-The full documentation is at https://django-ratings.models.readthedocs.io.
 
 Quickstart
 ----------

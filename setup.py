@@ -32,7 +32,7 @@ setup(
     url='https://github.com/exolever/django-ratings-models',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=['django-appconf', 'django-model-utils'],
+    install_requires=['django-appconf', 'django-model-utils', 'djangorestframework'],
     license="MIT",
     zip_safe=False,
     keywords='ratings',

@@ -14,10 +14,7 @@ from django.test import TestCase
 from ratings import models
 
 
-class TestRatings(TestCase):
-
-    def setUp(self):
-        pass
+class TestRatingsModels(TestCase):
 
     def test_simple_rating_model(self):
         # Data
@@ -42,6 +39,3 @@ class TestRatings(TestCase):
 
         # Asserts
         self.assertEqual(overall_rating.rating, rating.rating)
-
-    def tearDown(self):
-        pass

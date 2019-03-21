@@ -16,12 +16,14 @@ DATABASES = {
     }
 }
 
-# ROOT_URLCONF = "tests.urls"
+ROOT_URLCONF = "tests.urls"
 
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
+    "django.contrib.sessions",
     "django.contrib.sites",
+    "rest_framework",
     "ratings",
 ]
 
