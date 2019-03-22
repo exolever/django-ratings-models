@@ -31,18 +31,3 @@ class RatingsConfig(AppConf):
         (ANSWER_ADVISOR, 'Advisor in questions'),
         (STEP_FEEDBACK, 'Step Feedback'),
     )
-
-    CH_STATUS_RATING = 'R'
-    CH_STATUS_PENDING = 'P'
-    CH_STATUS_NOT_RATING = 'N'
-    CH_STATUS_SKIPPED = 'S'
-
-    USER_FEEDBACK_STATUS_NONE = 'N'
-    USER_FEEDBACK_STATUS_PENDING = 'P'
-    USER_FEEDBACK_STATUS_DONE = 'D'
-
-    USER_FEEDBACK_STATUS_CHOICES = (
-        (USER_FEEDBACK_STATUS_NONE, 'Not available'),
-        (USER_FEEDBACK_STATUS_PENDING, 'Pending'),
-        (USER_FEEDBACK_STATUS_DONE, 'Done'),
-    )
