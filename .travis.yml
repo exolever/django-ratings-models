@@ -12,7 +12,6 @@ matrix:
 
 # Addons
 addons:
-  postgresql: '9.6'
   sonarcloud:
     organization: "openexo"
     token:
