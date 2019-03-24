@@ -10,11 +10,18 @@ python: 3.6
 matrix:
   fast_finish: true
 
+# Addons
+addons:
+  sonarcloud:
+    organization: "openexo"
+
 # install dependencies
 install: pip install -r requirements_test.txt
 
 # run tests on every Python version with tox
-script: tox
+script: 
+  - tox
+  - sonar-scanner
 
 # pypi deployment
 deploy:
@@ -30,6 +37,4 @@ deploy:
     python: 3.6
 
 after_success:
-  - coverage run --source ratings runtests.py tests
-  - coverage report -m
   - codecov

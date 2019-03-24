@@ -15,6 +15,9 @@ django-ratings-models
 .. image:: https://codecov.io/gh/exolever/django-ratings-models/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/exolever/django-ratings-models
 
+.. image:: https://sonarcloud.io/api/project_badges/measure?project=exolever_django-ratings-models&metric=alert_status
+   :target: https://sonarcloud.io/dashboard?id=exolever_django-ratings-models
+
 ratings for your Django models
 
 
