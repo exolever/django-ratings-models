@@ -14,8 +14,6 @@ matrix:
 addons:
   sonarcloud:
     organization: "openexo"
-    token:
-      secure: "cgqkk7FMlbw+1N03PZJA2NSE/HvDQT/l60w+yy5xOuDtS2rqxm7WWTeL9PbWF8NAptNZ4sS/NhOKdu8ngkosNRPByzNiMWNLUaaFUmBuXQj8JGxW7kZbKJSiXhno8SaKh/qa2ZiWelpLSMiK5OBVmWeGRxsmvpHDMEentnAu6IPwYWnVl54K+18MW6mHb7C0Y7dqt88cwr+HLbZzEwccgZF5iwrKr1oXlA36M/S9+BxQz/9qKIVydn3bTZlyvnHzmkQsDNIl0ZJrhBWNbtrTsgJQmXsesdtnaNDX7yv7Uk+tXscA1zAVIXIBTVnXBh6VCFjHM+0rAgmSsghsPMAE5WVpForoIgRsDVvaedlgqEvX5IhbDMsTL9y4D/eLK65IznlPaU1YM8zp/pk5w8OpjVOYqZ+SoE+VQY/aWmwbdiBQnr9g1FO7L1GXF/XpM+rSp3gt/+hAz0u+w8JCuIb0akCLoHb7huoqErdPrIkBRnzDicN68t2zn4L49Fhk59L7qw2XeepgfOwx6Y18kVsJ/y/ggR8860CQyGwER6IplA2HDKY09xuq0TBDQGxmT9wvGQ1gswyw5d4oO4krNHlzMRy8+7TecNyV2PtGlP1sDoV+TPmmTaa4q2qE0GSgNw9cAjWWIuL+q+Fvf+g3/0X69nDv07U2LCZXIKu77YGKqls="
 
 # install dependencies
 install: pip install -r requirements_test.txt
