@@ -25,7 +25,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='django-ratings-models',
     version=version,
-    description="""ratings for your Django models""",
+    description='Ratings for your Django models',
     long_description=readme + '\n\n' + history,
     author='marfyl',
     author_email='marfyl.dev@gmail.com',

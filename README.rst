@@ -21,7 +21,7 @@ django-ratings-models
 .. image:: https://img.shields.io/badge/License-MIT-green.svg
    :target: https://opensource.org/licenses/MIT
 
-ratings for your Django models
+Ratings for your Django models
 
 
 Quickstart
