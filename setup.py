@@ -28,7 +28,7 @@ setup(
     description="""ratings for your Django models""",
     long_description=readme + '\n\n' + history,
     author='marfyl',
-    author_email='jose.marfil@openexo.com',
+    author_email='marfyl.dev@gmail.com',
     url='https://github.com/exolever/django-ratings-models',
     packages=find_packages(),
     include_package_data=True,
