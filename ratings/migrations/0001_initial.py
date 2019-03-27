@@ -23,11 +23,14 @@ class Migration(migrations.Migration):
             name='Interaction',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
+                ('created', model_utils.fields.AutoCreatedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='created')),
+                ('modified', model_utils.fields.AutoLastModifiedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='modified')),
                 ('object_id', models.IntegerField(db_index=True, null=True)),
                 ('rating', models.FloatField(null=True)),
-                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='interaction_objects', to='contenttypes.ContentType')),
+                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                   related_name='interaction_objects', to='contenttypes.ContentType')),
             ],
             options={
                 'abstract': False,
@@ -37,30 +40,41 @@ class Migration(migrations.Migration):
             name='OverallRating',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
+                ('created', model_utils.fields.AutoCreatedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='created')),
+                ('modified', model_utils.fields.AutoLastModifiedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='modified')),
                 ('rating', models.FloatField(null=True)),
-                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), ('ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
+                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), (
+                    'ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
                 ('object_id', models.IntegerField(db_index=True, null=True)),
                 ('context_object_id', models.IntegerField(db_index=True, null=True)),
-                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='overall_objects', to='contenttypes.ContentType')),
-                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='overall_contexts', to='contenttypes.ContentType')),
+                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                   related_name='overall_objects', to='contenttypes.ContentType')),
+                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                           related_name='overall_contexts', to='contenttypes.ContentType')),
             ],
         ),
         migrations.CreateModel(
             name='Rating',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
+                ('created', model_utils.fields.AutoCreatedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='created')),
+                ('modified', model_utils.fields.AutoLastModifiedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='modified')),
                 ('rating', models.IntegerField()),
                 ('comment', models.TextField(blank=True, null=True)),
-                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), ('ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
+                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), (
+                    'ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
                 ('object_id', models.IntegerField(db_index=True, null=True)),
                 ('context_object_id', models.IntegerField(db_index=True, null=True)),
-                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='rating_objects', to='contenttypes.ContentType')),
-                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='rating_contexts', to='contenttypes.ContentType')),
-                ('overall_rating', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='ratings', to='ratings.OverallRating')),
+                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                   related_name='rating_objects', to='contenttypes.ContentType')),
+                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                           related_name='rating_contexts', to='contenttypes.ContentType')),
+                ('overall_rating', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                     related_name='ratings', to='ratings.OverallRating')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
@@ -68,14 +82,19 @@ class Migration(migrations.Migration):
             name='SkipRating',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
+                ('created', model_utils.fields.AutoCreatedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='created')),
+                ('modified', model_utils.fields.AutoLastModifiedField(
+                    default=django.utils.timezone.now, editable=False, verbose_name='modified')),
                 ('object_id', models.IntegerField(db_index=True, null=True)),
                 ('comment', models.TextField(blank=True, null=True)),
-                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), ('ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
+                ('category', models.CharField(blank=True, choices=[('ticket-management-advisor', 'Ticket Management - Advisor'), ('ticket-management-user', 'Ticket Management - User'), (
+                    'ticket-advisor', 'Advisor in ticket'), ('answer-advisor', 'Advisor in questions'), ('step-feedback', 'Step Feedback')], max_length=250)),
                 ('context_object_id', models.IntegerField(db_index=True, null=True)),
-                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='skip_rating_objects', to='contenttypes.ContentType')),
-                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='skip_rating_contexts', to='contenttypes.ContentType')),
+                ('content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                   related_name='skip_rating_objects', to='contenttypes.ContentType')),
+                ('context_content_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                           related_name='skip_rating_contexts', to='contenttypes.ContentType')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
@@ -87,18 +106,22 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='interaction',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='interactions', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='interactions', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterUniqueTogether(
             name='skiprating',
-            unique_together=set([('object_id', 'content_type', 'user', 'category', 'context_content_type', 'context_object_id')]),
+            unique_together=set([('object_id', 'content_type', 'user', 'category',
+                                  'context_content_type', 'context_object_id')]),
         ),
         migrations.AlterUniqueTogether(
             name='rating',
-            unique_together=set([('object_id', 'content_type', 'user', 'category', 'context_content_type', 'context_object_id')]),
+            unique_together=set([('object_id', 'content_type', 'user', 'category',
+                                  'context_content_type', 'context_object_id')]),
         ),
         migrations.AlterUniqueTogether(
             name='overallrating',
-            unique_together=set([('context_object_id', 'context_content_type', 'category', 'object_id', 'content_type')]),
+            unique_together=set([('context_object_id', 'context_content_type',
+                                  'category', 'object_id', 'content_type')]),
         ),
     ]

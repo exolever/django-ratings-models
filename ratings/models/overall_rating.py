@@ -9,7 +9,6 @@ from django.contrib.contenttypes.models import ContentType
 
 from model_utils.models import TimeStampedModel
 
-from ..managers import OverallRatingManager
 from ..conf import settings
 from .rating import Rating
 from .skip_rating import SkipRating
@@ -44,8 +43,6 @@ class OverallRating(TimeStampedModel):
     context_object = GenericForeignKey(
         'context_content_type', 'context_object_id',
     )
-
-    objects = OverallRatingManager()
 
     class Meta:
         unique_together = [

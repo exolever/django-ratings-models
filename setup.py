@@ -35,7 +35,7 @@ setup(
     install_requires=['django-appconf', 'django-model-utils', 'djangorestframework'],
     license="MIT",
     zip_safe=False,
-    keywords='ratings',
+    keywords=['python', 'django', 'ratings'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
