@@ -8,8 +8,6 @@ from django.conf import settings
 
 from model_utils.models import TimeStampedModel
 
-# from ..managers.interaction import InteractionManager
-
 
 class Interaction(TimeStampedModel):
     user = models.ForeignKey(
@@ -30,8 +28,6 @@ class Interaction(TimeStampedModel):
         'OverallRating',
         related_name='interactions')
     rating = models.FloatField(null=True)
-
-    # objects = InteractionManager()
 
     def __str__(self):
         return '{} - {}'.format(self.user, self.target_object)
