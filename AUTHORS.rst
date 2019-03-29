@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* JMarfil <https://github.com/marfyl>
+* marfyl <https://github.com/marfyl>
 
 Contributors
 ------------

@@ -8,6 +8,6 @@ To use django-ratings-models in a project, add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'ratings.apps.RatingsConfig',
+        'ratings',
         ...
     )
