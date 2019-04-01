@@ -4,7 +4,7 @@ Explain the problem you encountered.
 
 ## Environment
 
-- django-ratins-models version:
+- django-ratings-models version:
 - django version: 
 - python version: 
 - other libraries used, if any:
