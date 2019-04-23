@@ -31,3 +31,8 @@ class RatingsConfig(AppConf):
         (ANSWER_ADVISOR, 'Advisor in questions'),
         (STEP_FEEDBACK, 'Step Feedback'),
     )
+
+    CH_STATUS_RATING = 'R'
+    CH_STATUS_PENDING = 'P'
+    CH_STATUS_NOT_RATING = 'N'
+    CH_STATUS_SKIPPED = 'S'
