@@ -35,7 +35,6 @@ class RatingSerializer(serializers.ModelSerializer):
 
 class OverallRatingSerializer(serializers.ModelSerializer):
     ratings = RatingSerializer(many=True)
-    userStatus = serializers.SerializerMethodField()
     category = serializers.SerializerMethodField()
 
     class Meta:
@@ -45,12 +44,7 @@ class OverallRatingSerializer(serializers.ModelSerializer):
             'rating',
             'category',
             'ratings',
-            'userStatus',
         ]
-
-    def get_userStatus(self, obj):
-        user = self.context.get('request').user
-        return obj.user_status(user)
 
     def get_category(self, obj):
         return obj.category.upper().replace('-', '_')
