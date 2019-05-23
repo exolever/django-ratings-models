@@ -36,4 +36,7 @@ class Interaction(TimeStampedModel):
         r = self.ratings.all().aggregate(r=models.Avg('rating'))['r'] or 0
         self.rating = round(r, 1)
         self.save()
-        self.target_object.stats.get('rating').set(self.rating)
+        try:
+            self.target_object.stats.get('rating').set(self.rating)
+        except AttributeError:
+            pass
